@@ -1,4 +1,4 @@
-package getPath
+package getpath
 
 import (
 	"log"

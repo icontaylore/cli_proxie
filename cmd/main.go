@@ -2,8 +2,8 @@ package main
 
 import (
 	"apiproxy/cli/command"
-	"apiproxy/cli/getPath"
-	"apiproxy/cli/getProxy"
+	"apiproxy/cli/getpath"
+	"apiproxy/cli/getproxie"
 	"bufio"
 	"fmt"
 	"os"
@@ -11,7 +11,7 @@ import (
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
-	filepath := getPath.Path()
+	filepath := getpath.Path()
 
 	for {
 		fmt.Printf("%s $ ", filepath)
@@ -22,7 +22,8 @@ func main() {
 		}
 
 		if command == "proxyget" {
-			getProxy.GetProxy()
+			//getproxie.GetProxy()
+			getproxie.BodyUnmarshal()
 		}
 	}
 }
