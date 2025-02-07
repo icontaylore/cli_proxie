@@ -39,11 +39,5 @@ func BodyUnmarshal() {
 	if ok := filecreate.CreateDir(); ok {
 		log.Printf("[директория создана]")
 	}
-
-	// не нужно скорее всего
-	//if err := filecreate.CreateFile(); err != nil {
-	//	log.Println("[файл не был создан]")
-	//	return
-	//}
 	filecreate.PayloadInFile(&arr)
 }
